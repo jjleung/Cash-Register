@@ -1,0 +1,57 @@
+body {
+    background-color: black;
+    color: white;
+    justify-content: center;
+}
+
+#device {
+    width: 210px;
+    border: 1px white solid;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+#display {
+    background-color: darkgrey;
+    color:black;
+    border-style: 1px solid white;
+    height: 30px;
+    min-width: 50px;
+    max-width: 200px;
+    margin-bottom: 15px;
+    text-align: right;
+    line-height: 250%;
+    padding-right: 3px;
+}
+
+li {
+    list-style-type: none;
+    height: 25px;
+    text-align: left;
+}
+
+button {
+    min-width: 25px;
+    text-align: center center; 
+}
+
+.nums {
+    width: 25px;
+
+}
+
+#doubleZero {
+    text-align: left
+}
+
+.spacers {
+    width: 25px;
+    visibility: hidden;
+}
+
+.eq {
+    float: none;
+    padding-left: 50px;
+}

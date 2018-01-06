@@ -15,7 +15,7 @@ function calculatorModule(){
    * @return { Number }    current total
    */
   function load(num){
-      validate(num);
+      _isNumber(num);
       _total = num;
       return _total;
   }
@@ -33,7 +33,7 @@ function calculatorModule(){
    * @param { Number } x
    */
   function add(num){
-      validate(num);
+      _isNumber(num);
       _total += num;
   }
 
@@ -42,7 +42,7 @@ function calculatorModule(){
    * @param  { Number } x
    */
   function subtract(num){
-      validate(num);
+      _isNumber(num);
       _total -= num;
   }
 
@@ -51,8 +51,8 @@ function calculatorModule(){
    * @param  { Number } x
    */
   function multiply(num){
-      validate(num);
-      _total = _total * num;
+      _isNumber(num);
+      _total *= num;
   }
 
 
@@ -61,8 +61,8 @@ function calculatorModule(){
    * @param  { Number } x
    */
   function divide(num){
-      validate(num);
-      _total = _total / num;
+      _isNumber(num);
+      _total /= num;
   }
 
   /**
@@ -91,10 +91,9 @@ function calculatorModule(){
   /**
    * Validation
    */
-  function validate(param){
-      if(typeof param !== typeof 0){
-        //   console.log("Error: Not a Number");
-          throw error;
+  function _isNumber(par){
+      if(typeof par !== "number"){
+          throw Error("Error: Not a Number");
       } 
       else{
           return true;
@@ -111,7 +110,6 @@ function calculatorModule(){
     recallMemory: recallMemory,
     saveMemory: saveMemory,
     clearMemory: clearMemory,
-    validate: validate
   }
 
   return calculator;
